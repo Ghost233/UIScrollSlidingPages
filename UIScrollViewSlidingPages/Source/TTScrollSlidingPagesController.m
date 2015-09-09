@@ -123,6 +123,8 @@
         topScrollView.directionalLockEnabled = YES;
         topScrollView.backgroundColor = [UIColor clearColor];
         topScrollView.pagingEnabled = self.pagingEnabled;
+        topScrollView.alwaysBounceVertical = NO;
+        topScrollView.bounces = NO;
         topScrollView.delegate = self; //move the bottom scroller proportionally as you drag the top.
         topScrollViewWrapper = [[TTScrollViewWrapper alloc] initWithFrame:CGRectMake(0, nextYPosition, self.view.frame.size.width, self.titleScrollerHeight) andUIScrollView:topScrollView];//make the view to put the scroll view inside which will allow the background colour, and allow dragging from anywhere in this wrapper to be passed to the scrollview.
         topScrollViewWrapper.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
@@ -157,6 +159,7 @@
     bottomScrollView.directionalLockEnabled = YES;
     bottomScrollView.delegate = self; //move the top scroller proportionally as you drag the bottom.
     bottomScrollView.alwaysBounceVertical = NO;
+    bottomScrollView.bounces = NO;
     [self.view addSubview:bottomScrollView];
     
     //add the drop shadow on the top scroller (if enabled) and bring the view to the front

@@ -44,12 +44,12 @@
     //slider.titleScrollerHeight = 100;
     //slider.titleScrollerItemWidth=60;
     //slider.titleScrollerBackgroundColour = [UIColor darkGrayColor];
-    //slider.disableTitleScrollerShadow = YES;
-    //slider.disableUIPageControl = YES;
+    self.slider.disableTitleScrollerShadow = YES;
+    self.slider.disableUIPageControl = YES;
     //slider.initialPageNumber = 1;
     //slider.pagingEnabled = NO;
-    //slider.zoomOutAnimationDisabled = YES;
-    //self.slider.disableTitleShadow = YES;
+    self.slider.zoomOutAnimationDisabled = YES;
+    self.slider.disableTitleShadow = YES;
     
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7){
         self.slider.hideStatusBarWhenScrolling = YES;//this property normally only makes sense on iOS7+. See the documentation in TTScrollSlidingPagesController.h. If you wanted to use it in iOS6 you'd have to make sure the status bar overlapped the TTScrollSlidingPagesController.
@@ -99,16 +99,16 @@
         //all other pages just use a simple text header
         switch (index) {
             case 1:
-                title = [[TTSlidingPageTitle alloc] initWithHeaderText:@"Page 2"];
+                title = [[TTSlidingPageTitle alloc] initWithHeaderText:@"a"];
                 break;
             case 2:
-                title = [[TTSlidingPageTitle alloc] initWithHeaderText:@"Another Page"];
+                title = [[TTSlidingPageTitle alloc] initWithHeaderText:@"a"];
                 break;
             case 3:
-                title = [[TTSlidingPageTitle alloc] initWithHeaderText:@"More Stuff"];
+                title = [[TTSlidingPageTitle alloc] initWithHeaderText:@"a"];
                 break;
             case 4:
-                title = [[TTSlidingPageTitle alloc] initWithHeaderText:@"Another Page"];
+                title = [[TTSlidingPageTitle alloc] initWithHeaderText:@"a"];
                 break;
             default:
                 title = [[TTSlidingPageTitle alloc] initWithHeaderText:[NSString stringWithFormat:@"Page %d", index+1]];

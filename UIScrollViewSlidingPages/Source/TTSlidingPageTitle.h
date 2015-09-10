@@ -30,10 +30,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TTSlidingPageTitle : NSObject
-
--(id)initWithHeaderText:(NSString*)headerText;
--(id)initWithHeaderImage:(UIImage*)headerImage;
+@interface TTSlidingPageTitle : UIView
 
 //The title text to go in the nav bar
 @property(strong, nonatomic) NSString *headerText;
